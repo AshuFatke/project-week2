@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+.header-container {
+    padding: 0 2rem; /* Adjust the padding as needed */
+}
+
+.header {
+    height: 34vw;
+    margin: 30px auto;
+    border-radius: 10px;
+    background: url('/header_img.avif') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    animation: fadeIn 2s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+}
+
+.header-contents {
+    animation: slideIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slide-up {
+    transform: translateY(-50%);
+}
+
+@media(max-width:1050px){
+ 
+    .header-contents{
+        max-width:45% ;
+    }
+}
+@media(max-width:750px){
+    
+    .header-contents{
+        max-width:65% ;
+    }
+    .header-contents p{
+        display: none;
+    }
+    .header-contents button{
+       padding: 2vw 4vw;
+    }
+}
